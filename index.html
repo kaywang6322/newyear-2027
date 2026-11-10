@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ms. Grace 2027 年節預購｜手工南棗核桃糕 & 新春禮盒</title>
+  <style>
+    :root {
+      --primary: #8C2B2B;
+      --primary-hover: #6B1F1F;
+      --bg: #FAF6F0;
+      --card-bg: #FFFFFF;
+      --text: #2C2C2C;
+      --subtext: #666666;
+      --border: #E5D9CC;
+      --accent: #D97724;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+    body { background-color: var(--bg); color: var(--text); line-height: 1.6; padding: 20px 12px; }
+    .container { max-width: 600px; margin: 0 auto; background: var(--card-bg); padding: 28px 20px; border-radius: 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
+    h1 { font-size: 1.5rem; color: var(--primary); text-align: center; margin-bottom: 8px; font-weight: 700; }
+    .subtitle { text-align: center; color: var(--subtext); font-size: 0.9rem; margin-bottom: 24px; }
+    .notice-box { background: #FFF9F2; border: 1px solid #FFE4C4; padding: 14px; border-radius: 10px; font-size: 0.85rem; color: #5C4033; margin-bottom: 24px; }
+    .notice-box ul { padding-left: 18px; margin-top: 6px; }
+    .form-step { display: none; }
+    .form-step.active { display: block; }
+    .form-group { margin-bottom: 20px; }
+    label { display: block; font-weight: 600; font-size: 0.95rem; margin-bottom: 6px; }
+    .field-hint { font-size: 0.8rem; color: var(--subtext); margin-bottom: 4px; font-weight: normal; }
+    .required { color: #D9534F; }
+    input[type="text"], input[type="tel"], input[type="email"], input[type="number"], select {
+      width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 8px; font-size: 1rem; outline: none; transition: 0.2s;
+    }
+    input:focus, select:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(140, 43, 43, 0.1); }
+    .item-card { border: 1px solid var(--border); padding: 16px; border-radius: 10px; margin-bottom: 14px; background: #FFFCF9; }
+    .item-title { font-weight: 700; color: var(--primary); font-size: 1.05rem; }
+    .item-desc { font-size: 0.85rem; color: var(--subtext); margin: 4px 0 10px 0; }
+    .summary-box { background: #FDF4E7; border-radius: 10px; padding: 16px; margin: 24px 0; font-size: 0.95rem; }
+    .summary-row { display: flex; justify-content: space-between; margin-bottom: 8px; }
+    .summary-row.total { border-top: 1px dashed #D3B89F; padding-top: 10px; font-weight: 700; color: var(--primary); font-size: 1.15rem; }
+    .btn-group { display: flex; gap: 12px; margin-top: 24px; }
+    .btn { flex: 1; padding: 14px; border: none; border-radius: 8px; font-size: 1rem; font-weight: 600; cursor: pointer; text-align: center; transition: 0.2s; text-decoration: none; }
+    .btn-primary { background: var(--primary); color: white; }
+    .btn-primary:hover { background: var(--primary-hover); }
+    .btn-secondary { background: #EFEFEF; color: #555; }
+    .bank-box { background: #F4F6F8; border: 1px solid #DCE1E7; padding: 16px; border-radius: 10px; margin: 16px 0; font-size: 0.95rem; }
+    .copy-btn { background: #E0E0E0; border: none; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem; cursor: pointer; margin-left: 8px; }
+    .qr-container { text-align: center; margin: 20px 0; }
+    .qr-img { width: 160px; height: 160px; border-radius: 8px; border: 1px solid var(--border); }
+    .line-btn { display: inline-block; background: #06C755; color: white; padding: 12px 24px; border-radius: 25px; text-decoration: none; font-weight: bold; margin-top: 10px; }
+    .expired-box { text-align: center; padding: 40px 10px; }
+    .expired-box h2 { color: var(--primary); margin-bottom: 12px; }
+  </style>
+</head>
+<body>
+
+<div class="container" id="main-container">
+  <h1>ms. Grace 2027 年節預購</h1>
+  <div class="subtitle">手工南棗核桃糕 & 新春禮盒</div>
+
+  <!-- 步驟一：商品選購與基本資料 -->
+  <div class="form-step active" id="step-1">
+    <div class="notice-box">
+      <strong>📌 訂購須知：</strong>
+      <ul>
+        <li>純手工製作，常溫保存約 <strong>45 天</strong>。</li>
+        <li><strong>優惠：</strong>全館任選總數量滿 10 件以上即享 <strong>95 折</strong>！</li>
+        <li><strong>免運：</strong>單筆金額滿 <strong>$3,500 元享免運費</strong>。</li>
+        <li>年節物流繁忙，寄出日非到貨日，建議提早預訂。</li>
+      </ul>
+    </div>
+
+    <div class="form-group">
+      <label>訂購人姓名 <span class="required">*</span></label>
+      <input type="text" id="cust-name" placeholder="例：葛瑞師" required>
+    </div>
+
+    <div class="form-group">
+      <label>聯絡電話 (請填手機號碼) <span class="required">*</span></label>
+      <input type="tel" id="cust-phone" placeholder="例：0912345678" required>
+    </div>
+
+    <div class="form-group">
+      <label>Email（填寫將會同步寄送訂單備份）</label>
+      <input type="email" id="cust-email" placeholder="example@email.com">
+    </div>
+
+    <!-- 商品 1 -->
+    <div class="item-card">
+      <div class="item-title">南棗核桃糕 自享包 (300g/包)</div>
+      <div class="item-desc">簡易手提袋裝｜原價 $370/包 (滿 10 件優惠價 $350/包)</div>
+      <input type="number" id="qty-bag" value="0" min="0" onchange="calculateTotal()">
+    </div>
+
+    <!-- 商品 2 -->
+    <div class="item-card">
+      <div class="item-title">小小心意禮盒 (200g/盒)</div>
+      <div class="item-desc">精緻禮盒裝｜原價 $270/盒 (滿 10 件優惠價 $250/盒)</div>
+      <input type="number" id="qty-heart" value="0" min="0" onchange="calculateTotal()">
+    </div>
+
+    <!-- 商品 3 -->
+    <div class="item-card">
+      <div class="item-title">新春雙拼禮盒 (含提袋)</div>
+      <div class="item-desc">南棗核桃糕 200g + 雪Q餅 5片｜原價 $450/盒 (滿 10 件優惠價 $420/盒)</div>
+      <input type="number" id="qty-box" value="0" min="0" onchange="calculateTotal()">
+    </div>
+
+    <div class="form-group">
+      <label>取貨 / 寄出日期 <span class="required">*</span></label>
+      <div class="field-hint">💡 溫馨提醒：年節物流繁忙且每日製作產能有限，越靠近節期越容易滿單。若無特定日期需求，建議您提早選擇取貨/寄出日期，確保順利送達喔！</div>
+      <select id="pick-date" required>
+        <option value="">-- 請選擇日期 --</option>
+        <option value="2027/01/10 (日)">2027/01/10 (日)</option>
+        <option value="2027/01/17 (日)">2027/01/17 (日)</option>
+        <option value="2027/01/24 (日)">2027/01/24 (日)</option>
+        <option value="2027/01/31 (日)">2027/01/31 (日)</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>取貨 / 配送方式 <span class="required">*</span></label>
+      <select id="ship-method" onchange="calculateTotal()" required>
+        <option value="面交自取">面交自取 (免運)</option>
+        <option value="7-11 店到店">7-11 店到店 (運費 $60，滿 $3500 免運)</option>
+        <option value="黑貓宅急便">黑貓宅急便 (運費 $160，滿 $3500 免運)</option>
+      </select>
+    </div>
+
+    <div class="summary-box">
+      <div class="summary-row"><span>商品小計：</span><span id="dis-subtotal">$0</span></div>
+      <div class="summary-row" id="discount-row" style="color: var(--accent); display:none;"><span>折扣優惠：</span><span>已套用滿 10 件 95 折！</span></div>
+      <div class="summary-row"><span>物流運費：</span><span id="dis-shipping">$0</span></div>
+      <div class="summary-row total"><span>應付總額：</span><span id="dis-total">$0</span></div>
+    </div>
+
+    <button class="btn btn-primary" style="width: 100%;" onclick="goToNextStep()">下一步：填寫資訊 / 付款</button>
+  </div>
+
+  <!-- 步驟二：物流收件資訊 -->
+  <div class="form-step" id="step-2">
+    <h3 style="color: var(--primary); margin-bottom: 16px;" id="step2-title">填寫收件資訊</h3>
+
+    <div class="form-group">
+      <label>收件人真實姓名 <span class="required">*</span></label>
+      <input type="text" id="rec-name" placeholder="例：葛瑞師 (店到店請務必與身分證相同)">
+    </div>
+
+    <div class="form-group">
+      <label>收件人手機號碼 <span class="required">*</span></label>
+      <div class="field-hint">📌 店到店與宅配包裹聯繫，必須使用手機號碼號碼以接收簡訊</div>
+      <input type="tel" id="rec-phone" placeholder="例：0912345678" required>
+    </div>
+
+    <div class="form-group" id="group-address">
+      <label id="label-address">收件完整地址 <span class="required">*</span></label>
+      <input type="text" id="rec-address" placeholder="請填寫縣市、路段與門牌">
+    </div>
+
+    <div class="form-group" id="group-backup-store" style="display: none;">
+      <label>備用 7-11 門市名稱/店號 (選填)</label>
+      <input type="text" id="rec-backup-store" placeholder="防止年節熱門門市關閉退回">
+    </div>
+
+    <div class="btn-group">
+      <button class="btn btn-secondary" onclick="showStep(1)">上一步</button>
+      <button class="btn btn-primary" onclick="submitOrder()">確認送出訂單</button>
+    </div>
+  </div>
+
+  <!-- 步驟三：匯款與 LINE@ 回報 -->
+  <div class="form-step" id="step-3">
+    <div style="text-align: center; margin-bottom: 20px;">
+      <h2 style="color: var(--primary);">🎉 訂單已順利送出！</h2>
+      <p style="color: var(--subtext); font-size: 0.9rem;">請於 48 小時內完成匯款並至 LINE@ 回報</p>
+    </div>
+
+    <div class="bank-box">
+      <strong>🏦 匯款帳戶資訊：</strong><br>
+      銀行名稱：台新銀行 (代碼 812)<br>
+      帳號：<strong id="bank-acc">28881017459770</strong> <button class="copy-btn" onclick="copyBankAcc()">複製帳號</button><br>
+      戶名：王郁文<br>
+      本次匯款總金額：<strong style="color: var(--primary); font-size: 1.1rem;" id="final-pay-amount">$0</strong>
+    </div>
+
+    <div class="qr-container">
+      <p style="font-size: 0.9rem; margin-bottom: 8px;"><strong>掃描或點擊下方加 LINE@ 回報匯款：</strong></p>
+      <img src="https://qr-official.line.me/gs/M_264jgxms_GW.png?oat_content=qr" class="qr-img" alt="LINE QR Code"><br>
+      <a href="https://lin.ee/75K6flN" target="_blank" class="line-btn">點此開啟 LINE@ 對帳</a>
+    </div>
+
+    <div style="background: #FFF; border: 1px dashed var(--border); padding: 12px; border-radius: 8px; font-size: 0.85rem; color: var(--subtext); margin-bottom: 20px;">
+      📌 <strong>回報範例：</strong><br>
+      加入 LINE@ 後請傳送：【姓名 + 電話 + 匯款金額 + 帳號末五碼】<br>
+      * 選擇自取的顧客，我們將於對帳完成後提供台北市文山區工作室詳細地址。
+    </div>
+
+    <button class="btn btn-secondary" style="width: 100%;" onclick="resetForm()">➕ 再次填寫一筆新訂單</button>
+  </div>
+</div>
+
+<script>
+  // 已串接您的 Google Apps Script 網址
+  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxYymT6mlUsEI4Bf0qhpiSr3ZObtuljBrKnh1IWGJ2j-kIqa_zEX9wJHF2uNoAbkSHt0Q/exec';
+
+  // 價格定義
+  const P_BAG_NORM = 370, P_BAG_DISC = 350;
+  const P_HEART_NORM = 270, P_HEART_DISC = 250;
+  const P_BOX_NORM = 450, P_BOX_DISC = 420;
+
+  // 檢查截止收單時間 (2027/01/27 23:59:59)
+  window.onload = function() {
+    const deadline = new Date('2027-01-27T23:59:59');
+    const now = new Date();
+    if (now > deadline) {
+      document.getElementById('main-container').innerHTML = `
+        <div class="expired-box">
+          <h2>🧧 2027 年節預購已截止收單</h2>
+          <p style="color: var(--subtext);">感謝大家的熱烈支持與喜愛！目前已額滿結束預購。</p>
+          <p style="color: var(--subtext); margin-top: 8px;">如有緊急問題，歡迎直接點擊 LINE@ 官方帳號聯繫我們。</p>
+          <a href="https://lin.ee/75K6flN" target="_blank" class="line-btn" style="margin-top:20px;">聯繫 LINE@ 客服</a>
+        </div>
+      `;
+    }
+  };
+
+  function calculateTotal() {
+    const qBag = parseInt(document.getElementById('qty-bag').value) || 0;
+    const qHeart = parseInt(document.getElementById('qty-heart').value) || 0;
+    const qBox = parseInt(document.getElementById('qty-box').value) || 0;
+    const totalQty = qBag + qHeart + qBox;
+    const method = document.getElementById('ship-method').value;
+
+    let subtotal = 0;
+    if (totalQty >= 10) {
+      subtotal = (qBag * P_BAG_DISC) + (qHeart * P_HEART_DISC) + (qBox * P_BOX_DISC);
+      document.getElementById('discount-row').style.display = 'flex';
+    } else {
+      subtotal = (qBag * P_BAG_NORM) + (qHeart * P_HEART_NORM) + (qBox * P_BOX_NORM);
+      document.getElementById('discount-row').style.display = 'none';
+    }
+
+    let shipping = 0;
+    if (method === '7-11 店到店') shipping = 60;
+    else if (method === '黑貓宅急便') shipping = 160;
+
+    if (subtotal >= 3500 || method === '面交自取') {
+      shipping = 0;
+    }
+
+    const grandTotal = subtotal + shipping;
+
+    document.getElementById('dis-subtotal').innerText = '$' + subtotal.toLocaleString();
+    document.getElementById('dis-shipping').innerText = shipping === 0 ? '免運' : '$' + shipping;
+    document.getElementById('dis-total').innerText = '$' + grandTotal.toLocaleString();
+
+    return { subtotal, shipping, grandTotal, totalQty };
+  }
+
+  function showStep(stepNum) {
+    document.querySelectorAll('.form-step').forEach(step => step.classList.remove('active'));
+    document.getElementById('step-' + stepNum).classList.add('active');
+    window.scrollTo(0, 0);
+  }
+
+  function goToNextStep() {
+    const name = document.getElementById('cust-name').value.trim();
+    const phone = document.getElementById('cust-phone').value.trim();
+    const date = document.getElementById('pick-date').value;
+    const calc = calculateTotal();
+
+    if (!name || !phone || !date) {
+      alert('請填寫訂購人姓名、電話與取貨/寄出日期！');
+      return;
+    }
+    if (calc.totalQty <= 0) {
+      alert('請至少選擇一種商品數量！');
+      return;
+    }
+
+    const method = document.getElementById('ship-method').value;
+    if (method === '面交自取') {
+      submitOrder();
+    } else {
+      if (method === '7-11 店到店') {
+        document.getElementById('step2-title').innerText = '填寫 7-11 門市資訊';
+        document.getElementById('label-address').innerText = '正取 7-11 門市名稱與店號 *';
+        document.getElementById('rec-address').placeholder = '例：文山門市 (店號 123456)';
+        document.getElementById('group-backup-store').style.display = 'block';
+      } else {
+        document.getElementById('step2-title').innerText = '填寫宅配收件資訊';
+        document.getElementById('label-address').innerText = '完整收件地址 *';
+        document.getElementById('rec-address').placeholder = '請填寫縣市、路段與門牌號碼';
+        document.getElementById('group-backup-store').style.display = 'none';
+      }
+      showStep(2);
+    }
+  }
+
+  function submitOrder() {
+    const name = document.getElementById('cust-name').value.trim();
+    const phone = document.getElementById('cust-phone').value.trim();
+    const email = document.getElementById('cust-email').value.trim();
+    const qBag = document.getElementById('qty-bag').value;
+    const qHeart = document.getElementById('qty-heart').value;
+    const qBox = document.getElementById('qty-box').value;
+    const date = document.getElementById('pick-date').value;
+    const method = document.getElementById('ship-method').value;
+    const calc = calculateTotal();
+
+    let recName = name, recPhone = phone, recAddress = '面交自取';
+
+    if (method !== '面交自取') {
+      recName = document.getElementById('rec-name').value.trim();
+      recPhone = document.getElementById('rec-phone').value.trim();
+      recAddress = document.getElementById('rec-address').value.trim();
+      if (method === '7-11 店到店') {
+        const backup = document.getElementById('rec-backup-store').value.trim();
+        if (backup) recAddress += ' (備用門市: ' + backup + ')';
+      }
+      if (!recName || !recPhone || !recAddress) {
+        alert('請完整填寫收件人姓名、手機號碼與收件門市/地址！');
+        return;
+      }
+    }
+
+    const payload = {
+      name: name,
+      phone: phone,
+      email: email,
+      shippingMethod: method,
+      date: date,
+      bagQty: qBag,
+      heartQty: qHeart,
+      boxQty: qBox,
+      totalAmount: calc.grandTotal,
+      recipientName: recName,
+      recipientPhone: recPhone,
+      shippingAddress: recAddress
+    };
+
+    document.getElementById('final-pay-amount').innerText = '$' + calc.grandTotal.toLocaleString();
+
+    // 發送至 Google Apps Script 寫入試算表
+    if (SCRIPT_URL) {
+      fetch(SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      }).catch(err => console.error('Error submitting order:', err));
+    }
+
+    showStep(3);
+  }
+
+  function resetForm() {
+    document.getElementById('qty-bag').value = 0;
+    document.getElementById('qty-heart').value = 0;
+    document.getElementById('qty-box').value = 0;
+    document.getElementById('cust-name').value = '';
+    document.getElementById('cust-phone').value = '';
+    document.getElementById('cust-email').value = '';
+    document.getElementById('rec-name').value = '';
+    document.getElementById('rec-phone').value = '';
+    document.getElementById('rec-address').value = '';
+    document.getElementById('rec-backup-store').value = '';
+    document.getElementById('pick-date').value = '';
+    calculateTotal();
+    showStep(1);
+  }
+
+  function copyBankAcc() {
+    const acc = document.getElementById('bank-acc').innerText;
+    navigator.clipboard.writeText(acc).then(() => alert('帳號已成功複製到剪貼簿！'));
+  }
+</script>
+</body>
+</html>
