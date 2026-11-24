@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ms. Grace 2027 年節預購｜手工南棗核桃糕 & 新春禮盒</title>
+  <title>Ms. Grace 2027 年節預購｜手作南棗核桃糕 × 蔓越莓雪花酥</title>
   <style>
     :root {
       --primary: #8C2B2B;
@@ -19,14 +19,14 @@
     body { background-color: var(--bg); color: var(--text); line-height: 1.6; padding: 20px 12px; }
     .container { max-width: 600px; margin: 0 auto; background: var(--card-bg); padding: 28px 20px; border-radius: 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
     h1 { font-size: 1.5rem; color: var(--primary); text-align: center; margin-bottom: 8px; font-weight: 700; }
-    .subtitle { text-align: center; color: var(--subtext); font-size: 0.9rem; margin-bottom: 24px; }
+    .subtitle { text-align: center; color: var(--subtext); font-size: 0.95rem; margin-bottom: 24px; font-weight: 500; }
     .notice-box { background: #FFF9F2; border: 1px solid #FFE4C4; padding: 14px; border-radius: 10px; font-size: 0.85rem; color: #5C4033; margin-bottom: 24px; }
     .notice-box ul { padding-left: 18px; margin-top: 6px; }
     .form-step { display: none; }
     .form-step.active { display: block; }
     .form-group { margin-bottom: 20px; }
     label { display: block; font-weight: 600; font-size: 0.95rem; margin-bottom: 6px; }
-    .field-hint { font-size: 0.8rem; color: var(--subtext); margin-bottom: 4px; font-weight: normal; }
+    .field-hint { font-size: 0.82rem; color: var(--subtext); margin-bottom: 8px; font-weight: normal; line-height: 1.5; background: #F9F9F9; padding: 8px 10px; border-radius: 6px; border-left: 3px solid var(--accent); }
     .required { color: #D9534F; }
     input[type="text"], input[type="tel"], input[type="email"], input[type="number"], select {
       width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 8px; font-size: 1rem; outline: none; transition: 0.2s;
@@ -43,6 +43,18 @@
     .btn-primary { background: var(--primary); color: white; }
     .btn-primary:hover { background: var(--primary-hover); }
     .btn-secondary { background: #EFEFEF; color: #555; }
+    .store-lookup-btn {
+      display: inline-block;
+      background: #007A33;
+      color: #FFFFFF;
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      margin-top: 6px;
+    }
+    .store-lookup-btn:hover { background: #005F27; }
     .bank-box { background: #F4F6F8; border: 1px solid #DCE1E7; padding: 16px; border-radius: 10px; margin: 16px 0; font-size: 0.95rem; }
     .copy-btn { background: #E0E0E0; border: none; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem; cursor: pointer; margin-left: 8px; }
     .qr-container { text-align: center; margin: 20px 0; }
@@ -55,16 +67,16 @@
 <body>
 
 <div class="container" id="main-container">
-  <h1>ms. Grace 2027 年節預購</h1>
-  <div class="subtitle">手工南棗核桃糕 & 新春禮盒</div>
+  <h1>Ms. Grace 2027 年節預購</h1>
+  <div class="subtitle">手作南棗核桃糕 × 蔓越莓雪花酥</div>
 
   <!-- 步驟一：商品選購與基本資料 -->
   <div class="form-step active" id="step-1">
     <div class="notice-box">
       <strong>📌 訂購須知：</strong>
       <ul>
-        <li>純手工製作，常溫保存約 <strong>45 天</strong>。</li>
-        <li><strong>優惠：</strong>全館任選總數量滿 10 件以上即享 <strong>95 折</strong>！</li>
+        <li>純手工製作，無添加防腐劑。</li>
+        <li><strong>優惠：</strong>全館任選總數量滿 10 件以上即享優惠！</li>
         <li><strong>免運：</strong>單筆金額滿 <strong>$3,500 元享免運費</strong>。</li>
         <li>年節物流繁忙，寄出日非到貨日，建議提早預訂。</li>
       </ul>
@@ -81,34 +93,52 @@
     </div>
 
     <div class="form-group">
-      <label>Email（填寫將會同步寄送訂單備份）</label>
+      <label>Email（填寫將會同步寄送訂單確認信）</label>
       <input type="email" id="cust-email" placeholder="example@email.com">
     </div>
 
-    <!-- 商品 1 -->
-    <div class="item-card">
-      <div class="item-title">南棗核桃糕 自享包 (300g/包)</div>
-      <div class="item-desc">簡易手提袋裝｜原價 $370/包 (滿 10 件優惠價 $350/包)</div>
-      <input type="number" id="qty-bag" value="0" min="0" onchange="calculateTotal()">
-    </div>
-
-    <!-- 商品 2 -->
-    <div class="item-card">
-      <div class="item-title">小小心意禮盒 (200g/盒)</div>
-      <div class="item-desc">精緻禮盒裝｜原價 $270/盒 (滿 10 件優惠價 $250/盒)</div>
-      <input type="number" id="qty-heart" value="0" min="0" onchange="calculateTotal()">
-    </div>
-
-    <!-- 商品 3 -->
+    <!-- 商品 1：新春雙拼禮盒 -->
     <div class="item-card">
       <div class="item-title">新春雙拼禮盒 (含提袋)</div>
-      <div class="item-desc">南棗核桃糕 200g + 雪Q餅 5片｜原價 $450/盒 (滿 10 件優惠價 $420/盒)</div>
-      <input type="number" id="qty-box" value="0" min="0" onchange="calculateTotal()">
+      <div class="item-desc">南棗核桃糕 200g + 蔓越莓雪花酥 6 片｜原價 $450 / 滿 10 件優惠 <strong>$420</strong></div>
+      <input type="number" id="qty-combo" value="0" min="0" onchange="calculateTotal()">
+    </div>
+
+    <!-- 商品 2：新春輕享禮盒（南棗核桃糕） -->
+    <div class="item-card">
+      <div class="item-title">新春輕享禮盒（南棗核桃糕）</div>
+      <div class="item-desc">南棗核桃糕 200g｜原價 $300 / 滿 10 件優惠 <strong>$280</strong></div>
+      <input type="number" id="qty-light-date" value="0" min="0" onchange="calculateTotal()">
+    </div>
+
+    <!-- 商品 3：新春輕享禮盒（蔓越莓雪花酥） -->
+    <div class="item-card">
+      <div class="item-title">新春輕享禮盒（蔓越莓雪花酥）</div>
+      <div class="item-desc">蔓越莓雪花酥 10 片｜原價 $270 / 滿 10 件優惠 <strong>$250</strong></div>
+      <input type="number" id="qty-light-crisp" value="0" min="0" onchange="calculateTotal()">
+    </div>
+
+    <!-- 商品 4：自享袋（南棗核桃糕） -->
+    <div class="item-card">
+      <div class="item-title">自享袋（南棗核桃糕）</div>
+      <div class="item-desc">南棗核桃糕 300g｜原價 $370 / 滿 10 件優惠 <strong>$350</strong></div>
+      <input type="number" id="qty-bag-date" value="0" min="0" onchange="calculateTotal()">
+    </div>
+
+    <!-- 商品 5：自享袋（蔓越莓雪花酥） -->
+    <div class="item-card">
+      <div class="item-title">自享袋（蔓越莓雪花酥）</div>
+      <div class="item-desc">蔓越莓雪花酥 15 片｜原價 $320 / 滿 10 件優惠 <strong>$300</strong></div>
+      <input type="number" id="qty-bag-crisp" value="0" min="0" onchange="calculateTotal()">
     </div>
 
     <div class="form-group">
       <label>取貨 / 寄出日期 <span class="required">*</span></label>
-      <div class="field-hint">💡 溫馨提醒：年節物流繁忙且每日製作產能有限，越靠近節期越容易滿單。若無特定日期需求，建議您提早選擇取貨/寄出日期，確保順利送達喔！</div>
+      <div class="field-hint">
+        💡 <strong>溫馨提醒：</strong><br>
+        • 年節物流繁忙且每日製作產能有限，越靠近節期越容易滿單。若無特定日期需求，建議您提早選擇取貨/寄出日期，確保順利送達喔！<br>
+        • 若有特殊取貨時間需求，歡迎直接私訊 LINE@ 與我們討論安排。
+      </div>
       <select id="pick-date" required>
         <option value="">-- 請選擇日期 --</option>
         <option value="2027/01/10 (日)">2027/01/10 (日)</option>
@@ -129,7 +159,7 @@
 
     <div class="summary-box">
       <div class="summary-row"><span>商品小計：</span><span id="dis-subtotal">$0</span></div>
-      <div class="summary-row" id="discount-row" style="color: var(--accent); display:none;"><span>折扣優惠：</span><span>已套用滿 10 件 95 折！</span></div>
+      <div class="summary-row" id="discount-row" style="color: var(--accent); display:none;"><span>折扣優惠：</span><span>已套用滿 10 件多件優惠價！</span></div>
       <div class="summary-row"><span>物流運費：</span><span id="dis-shipping">$0</span></div>
       <div class="summary-row total"><span>應付總額：</span><span id="dis-total">$0</span></div>
     </div>
@@ -148,18 +178,22 @@
 
     <div class="form-group">
       <label>收件人手機號碼 <span class="required">*</span></label>
-      <div class="field-hint">📌 店到店與宅配包裹聯繫，必須使用手機號碼號碼以接收簡訊</div>
+      <div class="field-hint">📌 店到店與宅配包裹聯繫，必須使用手機號碼以接收取貨簡訊</div>
       <input type="tel" id="rec-phone" placeholder="例：0912345678" required>
     </div>
 
     <div class="form-group" id="group-address">
       <label id="label-address">收件完整地址 <span class="required">*</span></label>
+      <div class="field-hint" id="store-hint" style="display: none;">
+        ⚠️ <strong>防呆提醒：</strong>同路段常有相似店名，請務必同時填寫<strong>「門市名稱 ＋ 6 碼店號」</strong>（例：景美門市 123456），避免寄錯門市喔！<br>
+        <a href="https://emap.pcsc.com.tw/" target="_blank" rel="noopener noreferrer" class="store-lookup-btn">🔍 點我開啟 7-11 門市名稱與店號查詢</a>
+      </div>
       <input type="text" id="rec-address" placeholder="請填寫縣市、路段與門牌">
     </div>
 
     <div class="form-group" id="group-backup-store" style="display: none;">
       <label>備用 7-11 門市名稱/店號 (選填)</label>
-      <input type="text" id="rec-backup-store" placeholder="防止年節熱門門市關閉退回">
+      <input type="text" id="rec-backup-store" placeholder="防止年節熱門門市關閉退回（例：興隆門市 654321）">
     </div>
 
     <div class="btn-group">
@@ -203,10 +237,14 @@
   // 已串接您的 Google Apps Script 網址
   const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxYymT6mlUsEI4Bf0qhpiSr3ZObtuljBrKnh1IWGJ2j-kIqa_zEX9wJHF2uNoAbkSHt0Q/exec';
 
-  // 價格定義
-  const P_BAG_NORM = 370, P_BAG_DISC = 350;
-  const P_HEART_NORM = 270, P_HEART_DISC = 250;
-  const P_BOX_NORM = 450, P_BOX_DISC = 420;
+  // 5 項商品原價與優惠價定義
+  const PRICES = {
+    combo:      { norm: 450, disc: 420 }, // 新春雙拼禮盒
+    lightDate:  { norm: 300, disc: 280 }, // 新春輕享禮盒（南棗核桃糕）
+    lightCrisp: { norm: 270, disc: 250 }, // 新春輕享禮盒（蔓越莓雪花酥）
+    bagDate:    { norm: 370, disc: 350 }, // 自享袋（南棗核桃糕）
+    bagCrisp:   { norm: 320, disc: 300 }  // 自享袋（蔓越莓雪花酥）
+  };
 
   // 檢查截止收單時間 (2027/01/27 23:59:59)
   window.onload = function() {
@@ -225,18 +263,30 @@
   };
 
   function calculateTotal() {
-    const qBag = parseInt(document.getElementById('qty-bag').value) || 0;
-    const qHeart = parseInt(document.getElementById('qty-heart').value) || 0;
-    const qBox = parseInt(document.getElementById('qty-box').value) || 0;
-    const totalQty = qBag + qHeart + qBox;
+    const qCombo      = parseInt(document.getElementById('qty-combo').value) || 0;
+    const qLightDate  = parseInt(document.getElementById('qty-light-date').value) || 0;
+    const qLightCrisp = parseInt(document.getElementById('qty-light-crisp').value) || 0;
+    const qBagDate    = parseInt(document.getElementById('qty-bag-date').value) || 0;
+    const qBagCrisp   = parseInt(document.getElementById('qty-bag-crisp').value) || 0;
+
+    const totalQty = qCombo + qLightDate + qLightCrisp + qBagDate + qBagCrisp;
     const method = document.getElementById('ship-method').value;
+    const isDisc = totalQty >= 10;
 
     let subtotal = 0;
-    if (totalQty >= 10) {
-      subtotal = (qBag * P_BAG_DISC) + (qHeart * P_HEART_DISC) + (qBox * P_BOX_DISC);
+    if (isDisc) {
+      subtotal = (qCombo * PRICES.combo.disc) +
+                 (qLightDate * PRICES.lightDate.disc) +
+                 (qLightCrisp * PRICES.lightCrisp.disc) +
+                 (qBagDate * PRICES.bagDate.disc) +
+                 (qBagCrisp * PRICES.bagCrisp.disc);
       document.getElementById('discount-row').style.display = 'flex';
     } else {
-      subtotal = (qBag * P_BAG_NORM) + (qHeart * P_HEART_NORM) + (qBox * P_BOX_NORM);
+      subtotal = (qCombo * PRICES.combo.norm) +
+                 (qLightDate * PRICES.lightDate.norm) +
+                 (qLightCrisp * PRICES.lightCrisp.norm) +
+                 (qBagDate * PRICES.bagDate.norm) +
+                 (qBagCrisp * PRICES.bagCrisp.norm);
       document.getElementById('discount-row').style.display = 'none';
     }
 
@@ -270,7 +320,7 @@
     const calc = calculateTotal();
 
     if (!name || !phone || !date) {
-      alert('請填寫訂購人姓名、電話與取貨/寄出日期！');
+      alert('請填寫訂購人姓名、手機號碼與取貨/寄出日期！');
       return;
     }
     if (calc.totalQty <= 0) {
@@ -284,13 +334,15 @@
     } else {
       if (method === '7-11 店到店') {
         document.getElementById('step2-title').innerText = '填寫 7-11 門市資訊';
-        document.getElementById('label-address').innerText = '正取 7-11 門市名稱與店號 *';
-        document.getElementById('rec-address').placeholder = '例：文山門市 (店號 123456)';
+        document.getElementById('label-address').innerText = '正取 7-11 門市名稱與 6 碼店號 *';
+        document.getElementById('rec-address').placeholder = '例：景美門市 123456';
+        document.getElementById('store-hint').style.display = 'block';
         document.getElementById('group-backup-store').style.display = 'block';
       } else {
         document.getElementById('step2-title').innerText = '填寫宅配收件資訊';
         document.getElementById('label-address').innerText = '完整收件地址 *';
         document.getElementById('rec-address').placeholder = '請填寫縣市、路段與門牌號碼';
+        document.getElementById('store-hint').style.display = 'none';
         document.getElementById('group-backup-store').style.display = 'none';
       }
       showStep(2);
@@ -301,9 +353,13 @@
     const name = document.getElementById('cust-name').value.trim();
     const phone = document.getElementById('cust-phone').value.trim();
     const email = document.getElementById('cust-email').value.trim();
-    const qBag = document.getElementById('qty-bag').value;
-    const qHeart = document.getElementById('qty-heart').value;
-    const qBox = document.getElementById('qty-box').value;
+
+    const qCombo      = document.getElementById('qty-combo').value;
+    const qLightDate  = document.getElementById('qty-light-date').value;
+    const qLightCrisp = document.getElementById('qty-light-crisp').value;
+    const qBagDate    = document.getElementById('qty-bag-date').value;
+    const qBagCrisp   = document.getElementById('qty-bag-crisp').value;
+
     const date = document.getElementById('pick-date').value;
     const method = document.getElementById('ship-method').value;
     const calc = calculateTotal();
@@ -330,9 +386,11 @@
       email: email,
       shippingMethod: method,
       date: date,
-      bagQty: qBag,
-      heartQty: qHeart,
-      boxQty: qBox,
+      comboQty: qCombo,
+      lightDateQty: qLightDate,
+      lightCrispQty: qLightCrisp,
+      bagDateQty: qBagDate,
+      bagCrispQty: qBagCrisp,
       totalAmount: calc.grandTotal,
       recipientName: recName,
       recipientPhone: recPhone,
@@ -355,9 +413,11 @@
   }
 
   function resetForm() {
-    document.getElementById('qty-bag').value = 0;
-    document.getElementById('qty-heart').value = 0;
-    document.getElementById('qty-box').value = 0;
+    document.getElementById('qty-combo').value = 0;
+    document.getElementById('qty-light-date').value = 0;
+    document.getElementById('qty-light-crisp').value = 0;
+    document.getElementById('qty-bag-date').value = 0;
+    document.getElementById('qty-bag-crisp').value = 0;
     document.getElementById('cust-name').value = '';
     document.getElementById('cust-phone').value = '';
     document.getElementById('cust-email').value = '';
